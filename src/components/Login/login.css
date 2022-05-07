@@ -1,0 +1,33 @@
+.divider {
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+    position: relative;
+}
+
+.divider::before {
+    content: "";
+    display: block;
+    background: rgb(136, 110, 110);
+    height: 1px;
+    width: 80px;
+    clear: both;
+    position: absolute;
+    left: 114px;
+    bottom: 9px;
+}
+
+.divider::after {
+    content: "";
+    display: block;
+    background: rgb(136, 110, 110);
+    height: 1px;
+    width: 80px;
+    clear: both;
+    position: absolute;
+    right: 114px;
+    bottom: 9px;
+
+
+
+}
