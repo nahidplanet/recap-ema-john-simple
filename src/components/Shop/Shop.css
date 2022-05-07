@@ -1,0 +1,14 @@
+.shop-page{
+   width: 1440px; 
+   display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+
+
+.cart-page{
+    width: 263px;
+    background-color:  #f0c17c;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+}
