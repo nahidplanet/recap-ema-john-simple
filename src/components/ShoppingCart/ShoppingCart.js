@@ -3,7 +3,6 @@ import './ShoppingCart.css'
 
 const ShoppingCart = (props) => {
     const {addCart,clearCart} = props;
-    console.log(props);
     const quantity = addCart.reduce((x,y) => x+ y.quantity,0);
 
     const price = addCart.reduce((x,y) => x+ y.price *quantity,0);

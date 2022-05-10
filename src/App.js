@@ -7,6 +7,8 @@ import Inventory from './components/Inventory/Inventory';
 import Login from './components/Login/Login';
 import NotFound from './components/NotFound/NotFound';
 import Order from './components/Order/Order';
+import RequireAuth from './components/RequireAuth/RequireAuth';
+import Shipping from './components/Shipping/Shipping';
 import Shop from './components/Shop/Shop';
 import SingUp from './components/SingUp/SingUp';
 
@@ -18,6 +20,7 @@ function App() {
         <Route path='/' element={<Home></Home>}> </Route>
         <Route path='/shop' element={<Shop></Shop>}> </Route>
         <Route path='/order' element={<Order></Order>}></Route>
+        <Route path='/shipping' element={<RequireAuth><Shipping></Shipping></RequireAuth>}></Route>
         <Route path='/inventory' element={<Inventory></Inventory>}></Route>
         <Route path='/log-in' element={<Login></Login>}></Route>
         <Route path='/singup' element={<SingUp></SingUp>}></Route>
