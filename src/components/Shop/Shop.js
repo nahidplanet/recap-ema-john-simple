@@ -51,8 +51,7 @@ const Shop = () => {
     return (
 
         <div className='shop-page'>
-
-            <div className='product grid grid-cols-2 md:grid-cols-3 gap-5 px-10 py-6'>
+            <div className='product grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 px-10 py-6'>
                 {/* from ProductCard */}
                 {
                     getDataApi.map(product => <ProductCard

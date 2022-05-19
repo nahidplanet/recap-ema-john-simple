@@ -1,14 +1,32 @@
-.shop-page{
-   width: 1440px; 
-   display: grid;
+.shop-page {
+    width: 100%;
+    display: grid;
     grid-template-columns: 4fr 1fr;
+    margin: 0;
+    padding: 0;
 }
 
 
-.cart-page{
-    width: 263px;
-    background-color:  #f0c17c;
+.cart-page {
+    width: 100%;
+    background-color: #f0c17c;
     height: 100vh;
     position: sticky;
     top: 0;
+    margin: 0;
+    padding: 0;
+}
+
+@media only screen and (max-width:575px) {
+    .shop-page {
+        display: grid;
+        grid-template-columns: 4fr 1fr;
+        margin: 0 auto ;
+    }
+
+    .shop-page .product {
+        width: 90%;
+        margin: 0 auto;
+        padding: 0;
+    }
 }

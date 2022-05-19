@@ -1,39 +1,25 @@
-import { signOut } from 'firebase/auth';
 import React from 'react';
-import { useAuthState } from 'react-firebase-hooks/auth';
-import { Link } from 'react-router-dom';
-import auth from '../../firebase-install/firebase.init';
-import CustomLink from '../CustomLink/CustomLink';
-
-import './Header.css';
+import logo from '../../images/Logo.svg'
+import './Header.css'
+import CustomLink from '../CustomLink/CustomLink'
 
 const Header = () => {
-    const [user] = useAuthState(auth);
-    const handleSingOut = () => {
-        signOut(auth);
-    }
     return (
-        <div className='header-section-start'>
+        <div className='header-section'>
             <div className="navbar">
                 <div className="logo">
-                    <Link to={'/'} className='text-white'>Ema-John</Link>
+                    <CustomLink to='/'><img src={logo} alt=""  /></CustomLink>
                 </div>
-                <nav >
-                    <ul>
-                        <li><CustomLink to={'/' } > Home </CustomLink> </li>
-                        <li><CustomLink to={'/shop'}>Shop</CustomLink></li>
-                        <li><CustomLink to={'/order'}>Order</CustomLink></li>
-                        <li><CustomLink to={'/inventory'}>Inventory</CustomLink></li>
-                        {
-                        user ? <button className='border text-white p-2 ' type='button' onClick={handleSingOut}>logOut</button>
-                        :
-                        <li><CustomLink to={'/log-in'} >login</CustomLink></li>
-                        }
-                    </ul>
+                <nav className="nav ">
+                        <CustomLink to='/home' >Home</CustomLink>
+                        <CustomLink to='/shop' >Shop</CustomLink>
+                        <CustomLink to='/order' >order</CustomLink>
+                        <CustomLink to='/inventory'> inventory</CustomLink>
+                        <CustomLink to='/log-in' >login</CustomLink>
                 </nav>
             </div>
         </div>
-    )
+    );
 };
 
 export default Header;
